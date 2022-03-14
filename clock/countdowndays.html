@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Days</title>
+
+    <link rel="stylesheet" href="./flipclock.css">
+    <script src="./jquery.min.js"></script>
+    <script src="./flipclock.min.js"></script>
+
+</head>
+<body>
+
+    <div class="clock-3" style="margin: 2em 0; "></div>
+
+    <script type="text/javascript">
+
+    var clocks = [];
+    function workClock() {
+
+        var currentDate = new Date();
+        var pastDate  = new Date('2021-08-13 00:00:00');
+        var days = parseInt((currentDate.getTime() - pastDate.getTime()) / (1000*60*60*24));
+        clocks.push($('.clock-3').FlipClock(days, {
+            clockFace: 'Counter'
+        }));
+    }
+
+    $(document).ready(function() {
+        workClock();
+    });
+
+    </script>
+
+</body>
+</html>

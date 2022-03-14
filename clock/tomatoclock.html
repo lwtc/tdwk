@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clock</title>
+    <title>Tomato Clock</title>
 
     <link rel="stylesheet" href="./flipclock.css">
     <script src="./jquery.min.js"></script>
@@ -15,8 +15,6 @@
 
     <div class="message" style="margin: 2em 0 2em 36px; color:red; font-size:28px"></div>
     <div class="clock-1" style="margin: 2em 0; "></div>
-    <div class="clock-2" style="margin: 2em 0; "></div>
-    <div class="clock-3" style="margin: 2em 0; "></div>
 
     <script type="text/javascript">
 
@@ -41,21 +39,19 @@
             countdown: true,
             callbacks: {
                 stop: function() {
+                    console.log('-- countdown stop --');
+                    clocks = [];
                     workClock();
+                },
+                interval: function() {
+                    var time = this.factory.getTime().time;
+                    if(time) {
+                        console.log('interval', time);
+                    }
                 }
             }
         }));
 
-        clocks.push($('.clock-2').FlipClock({
-            clockFace: 'TwentyFourHourClock',
-            showSeconds: false
-        }));
-
-        var pastDate  = new Date('2021-08-13 00:00:00');
-        var days = parseInt((currentDate.getTime() - pastDate.getTime()) / (1000*60*60*24));
-        clocks.push($('.clock-3').FlipClock(days, {
-            clockFace: 'Counter'
-        }));
     }
 
     $(document).ready(function() {
