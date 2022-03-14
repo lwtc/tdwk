@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+
+    <link rel="stylesheet" href="./flipclock.css">
+    <script src="./jquery.min.js"></script>
+    <script src="./flipclock.min.js"></script>
+
+</head>
+<body>
+
+    <div class="message" style="margin:2em; color:red; font-size:28px"></div>
+    <div class="clock-1" style="margin:2em;"></div>
+    <div class="clock-2" style="margin:2em;"></div>
+    <div class="clock-3" style="margin:2em;"></div>
+
+    <script type="text/javascript">
+
+    var clocks = [];
+    function workClock() {
+
+        var currentDate = new Date();
+        var secUp = (currentDate.getTime() / 1000) % (60*30);
+        var secDown = 60*30 - secUp;
+        var minFive = 60*5;
+
+        var countDown = secDown;
+        if(secDown > minFive){
+            countDown = secDown - minFive;
+            $('.message').html('番茄钟：工作时间');
+        }else{
+            $('.message').html('番茄钟：中场休息');
+        }
+
+        clocks.push($('.clock-1').FlipClock(countDown,{
+            clockFace: 'MinuteCounter',
+            countdown: true,
+            callbacks: {
+                stop: function() {
+                    workClock();
+                }
+            }
+        }));
+
+        clocks.push($('.clock-2').FlipClock({
+            clockFace: 'TwentyFourHourClock',
+            showSeconds: false
+        }));
+
+        var pastDate  = new Date('2021-08-13 00:00:00');
+        var days = parseInt((currentDate.getTime() - pastDate.getTime()) / (1000*60*60*24));
+        clocks.push($('.clock-3').FlipClock(days, {
+            clockFace: 'Counter'
+        }));
+    }
+
+    $(document).ready(function() {
+        workClock();
+    });
+
+    </script>
+
+</body>
+</html>
