@@ -19,33 +19,66 @@
     <script type="text/javascript">
 
     var clocks = [];
-    function workClock() {
+    var worktime = true;
+
+    function createCountDownNumber() {
 
         var currentDate = new Date();
-        var secUp = (currentDate.getTime() / 1000) % (60*30);
+        var secUp = parseInt((currentDate.getTime() / 1000)) % (60*30);
         var secDown = 60*30 - secUp;
         var minFive = 60*5;
 
         var countDown = secDown;
         if(secDown > minFive){
             countDown = secDown - minFive;
+            worktime = true;
+        }else{
+            worktime = false;
+        }
+
+        return countDown;
+    }
+
+    function workClock() {
+
+        var countDownNumber = createCountDownNumber();
+        if(worktime){
             $('.message').html('番茄钟：工作时间');
         }else{
             $('.message').html('番茄钟：中场休息');
         }
 
-        clocks.push($('.clock-1').FlipClock(countDown,{
+        clocks.push($('.clock-1').FlipClock(countDownNumber,{
             clockFace: 'MinuteCounter',
             countdown: true,
             callbacks: {
                 stop: function() {
                     console.log('-- countdown stop --');
-                    clocks = [];
-                    workClock();
                 },
                 interval: function() {
                     var time = this.factory.getTime().time;
-                    if(time) {
+
+                    // if time is error, refresh the clock page
+                    if(createCountDownNumber()!=time){
+                        if(document.hidden) {
+                            console.log('document.hidden');
+                        } else {
+                            console.log('document.visible');
+                            location.reload();
+                        }
+                    }
+
+                    // every 10 minutes refresh the clock page
+                    // if(1==(time%(60*10))){
+                    // if countdown stop reset the workClock
+                    if(1==time){
+                        setTimeout(function(){
+                            // location.reload();
+                            workClock();
+                        },2000);
+                    }
+
+                    if(0==(time%10)) {
                         console.log('interval', time);
                     }
                 }
