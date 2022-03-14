@@ -19,63 +19,79 @@
     <script type="text/javascript">
 
     var clocks = [];
-    var worktime = true;
+    var clock;
 
-    function createCountDownNumber() {
+    function createCountDownNumber(checkFlag) {
 
         var currentDate = new Date();
-        var secUp = parseInt((currentDate.getTime() / 1000)) % (60*30);
-        var secDown = 60*30 - secUp;
-        var minFive = 60*5;
+        var unit = 60;
+        var secUp = parseInt((currentDate.getTime() / 1000)) % (unit*30);
+        var secDown = unit*30 - secUp;
+        var minFive = unit*5;
 
         var countDown = secDown;
-        if(secDown > minFive){
+        if(secDown > minFive) {
             countDown = secDown - minFive;
-            worktime = true;
-        }else{
-            worktime = false;
+            $('.message').html('番茄钟：工作时间');
+        } else {
+            $('.message').html('番茄钟：中场休息');
         }
 
         return countDown;
     }
 
+    var reset = false;
+    function resetCountDown(resetCDN,time,inner){
+        if(!reset || inner){
+            reset = true;
+            var la = "";
+            var lb = "";
+            if(resetCDN || time){
+                la=resetCDN;
+                lb=time;
+            }
+
+            var countDown = createCountDownNumber();
+
+            if(1==countDown){
+                setTimeout(function(){
+                    resetCountDown(la,lb,true);
+                },1000);
+            }else{
+                if(!document.hidden){
+                    // location.reload();
+                    console.log('====>>>>',la);
+                    clock.setTime(countDown);
+                    clock.start();
+                    console.log('====<<<<',lb);
+                }
+            }
+
+            reset = false;
+        }
+    }
+
     function workClock() {
 
         var countDownNumber = createCountDownNumber();
-        if(worktime){
-            $('.message').html('番茄钟：工作时间');
-        }else{
-            $('.message').html('番茄钟：中场休息');
-        }
 
-        clocks.push($('.clock-1').FlipClock(countDownNumber,{
+        clock = $('.clock-1').FlipClock(countDownNumber, {
             clockFace: 'MinuteCounter',
             countdown: true,
             callbacks: {
                 stop: function() {
-                    console.log('-- countdown stop --');
+                    console.log('******** countdown stop ********');
+                    // if countdown stop, reset the workClock
+                    resetCountDown();
                 },
                 interval: function() {
                     var time = this.factory.getTime().time;
 
-                    // if time is error, refresh the clock page
-                    if(createCountDownNumber()!=time){
-                        if(document.hidden) {
-                            console.log('document.hidden');
-                        } else {
-                            console.log('document.visible');
-                            location.reload();
-                        }
-                    }
-
-                    // every 10 minutes refresh the clock page
-                    // if(1==(time%(60*10))){
-                    // if countdown stop reset the workClock
-                    if(1==time){
-                        setTimeout(function(){
-                            // location.reload();
-                            workClock();
-                        },2000);
+                    // if time is error, reset the workClock
+                    var resetCDN = createCountDownNumber(true);
+                    if(Math.abs(resetCDN-time)>1) {
+                        console.log('******** countdown reset ********');
+                        resetCountDown(resetCDN,time);
                     }
 
                     if(0==(time%10)) {
@@ -83,12 +99,30 @@
                     }
                 }
             }
-        }));
+        });
+
+        clocks.push(clock);
 
     }
 
     $(document).ready(function() {
         workClock();
+    });
+
+    document.addEventListener("visibilitychange", function(){
+        if(document.hidden) {
+            console.log('******** document.hidden ********');
+            if(clock) {
+                clock.stop();
+            }
+        } else {
+            console.log('******** document.visible ********');
+            if(clock) {
+                resetCountDown();
+            } else {
+                workClock();
+            }
+        }
     });
 
     </script>
