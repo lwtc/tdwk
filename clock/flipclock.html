@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background:black;">
 <head>
 
     <meta charset="UTF-8">
@@ -11,9 +11,9 @@
     <script src="./flipclock.min.js"></script>
 
 </head>
-<body>
+<body style="margin:0; display:flex; justify-content:center; align-items:center;">
 
-    <div class="clock-2" style="margin: 2em 0; "></div>
+    <div class="clock-2" style="margin:0; height:100px; width:460px;"></div>
 
     <script type="text/javascript">
 
@@ -27,9 +27,18 @@
 
     }
 
+    function setBodyHeight(){
+        $(document.body).height($(window).height());
+    }
+
     $(document).ready(function() {
         workClock();
+        setBodyHeight();
     });
+
+    window.onresize=function(){
+        setBodyHeight();
+    }
 
     </script>
 
