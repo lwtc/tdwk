@@ -16,7 +16,10 @@
     <div style="display:block;">
     <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; height:200px; width:300px;">
 
-        <div class="message" style="color:#40ff40; font-size:28px;"></div>
+        <div style="color:#40ff40; font-size:28px;">
+            <span id="type"></span>
+            <span class="message"></span>
+        </div>
         <div class="clock-1" style="margin:0; height:100px; width:300px;"></div>
 
     </div>
@@ -26,21 +29,29 @@
 
     var clocks = [];
     var clock;
+    var type = false;
 
-    function createCountDownNumber(checkFlag) {
+    function createCountDownNumber(){
 
         var currentDate = new Date();
         var unit = 60;
-        var secUp = parseInt((currentDate.getTime() / 1000)) % (unit*30);
-        var secDown = unit*30 - secUp;
-        var minFive = unit*5;
+        var big = 1;
+        if(type || 'true'==localStorage.getItem("clocktype")){
+            big = 2;
+            $('#type').html('大番茄 🍅 ');
+        }else{
+            $('#type').html('小番茄 🍅 ');
+        }
+        var secUp = parseInt((currentDate.getTime() / 1000)) % (unit*30*big);
+        var secDown = unit*30*big - secUp;
+        var minFive = unit*5*big;
 
         var countDown = secDown;
-        if(secDown > minFive) {
+        if(secDown > minFive){
             countDown = secDown - minFive;
-            $('.message').html('番茄钟：工作时间');
-        } else {
-            $('.message').html('番茄钟：中场休息');
+            $('.message').html('专注中');
+        }else{
+            $('.message').html('休息中');
         }
 
         return countDown;
@@ -67,6 +78,9 @@
                 if(!document.hidden){
                     // location.reload();
                     console.log('====>>>>',la);
+                    if(clock.running){
+                        clock.stop();
+                    }
                     clock.setTime(countDown);
                     clock.start();
                     console.log('====<<<<',lb);
@@ -77,7 +91,7 @@
         }
     }
 
-    function workClock() {
+    function workClock(){
 
         var countDownNumber = createCountDownNumber();
 
@@ -85,22 +99,25 @@
             clockFace: 'MinuteCounter',
             countdown: true,
             callbacks: {
-                stop: function() {
-                    console.log('******** countdown stop ********');
-                    // if countdown stop, reset the workClock
+                start: function(){
+                    console.log('******** clock start ********');
+                },
+                stop: function(){
+                    console.log('******** clock stop ********');
+                    // if clock stop, restart the workClock
                     resetCountDown();
                 },
-                interval: function() {
+                interval: function(){
                     var time = this.factory.getTime().time;
 
-                    // if time is error, reset the workClock
+                    // if time is error, correct the workClock
                     var resetCDN = createCountDownNumber(true);
-                    if(Math.abs(resetCDN-time)>1) {
-                        console.log('******** countdown reset ********');
+                    if(Math.abs(resetCDN-time)>1){
+                        console.log('******** clock correct ********');
                         resetCountDown(resetCDN,time);
                     }
 
-                    if(0==(time%10)) {
+                    if(0==(time%10)){
                         console.log('interval', time);
                     }
                 }
@@ -115,22 +132,22 @@
         $(document.body).height($(window).height());
     }
 
-    $(document).ready(function() {
+    $(document).ready(function(){
         workClock();
         setBodyHeight();
     });
 
     document.addEventListener("visibilitychange", function(){
-        if(document.hidden) {
+        if(document.hidden){
             console.log('******** document.hidden ********');
-            if(clock) {
+            if(clock){
                 clock.stop();
             }
-        } else {
+        }else{
             console.log('******** document.visible ********');
-            if(clock) {
+            if(clock){
                 resetCountDown();
-            } else {
+            }else{
                 workClock();
                 setBodyHeight();
             }
@@ -140,6 +157,21 @@
     window.onresize=function(){
         setBodyHeight();
     }
+
+    var oneclick = false;
+    $("#type").click(function(){
+        // max one click in two seconds
+        if(!oneclick){
+            oneclick = true;
+            type = !type;
+            localStorage.setItem("clocktype", type);
+            console.log('******** clock change ********');
+            resetCountDown();
+            setTimeout(function(){
+                oneclick = false;
+            },2000);
+        }
+    });
 
     </script>
 
