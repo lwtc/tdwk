@@ -263,7 +263,7 @@ Error message and password prompt
 
 <li>示例多行文本</li>
 
-<li>示例汇总</li>
+<li>示例目录树</li>
 
 <li>示例无序列表</li>
 
@@ -272,6 +272,8 @@ Error message and password prompt
 <li>示例有序列表</li>
 
 <li>首页</li>
+
+<li>tiddlywiki使用</li>
 
 </ul>
 </p>
@@ -9649,9 +9651,9 @@ Error message and password prompt
 /&gt;
 </pre>
 </div>
-<div created="20200211073547979" modified="20200211114828598" title="$:/DefaultTiddlers">
+<div created="20200211073547979" modified="20221023065934815" title="$:/DefaultTiddlers">
 <pre>首页
-示例汇总</pre>
+tiddlywiki使用</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -13375,7 +13377,7 @@ Error message and password prompt
 <div created="20200211071208555" modified="20200211133402309" title="$:/state/tab/moresidebar-65670323">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200211070919816" modified="20200211150202796" title="$:/state/tab/sidebar-1206596165">
+<div created="20200211070919816" modified="20221023102920479" title="$:/state/tab/sidebar-1206596165">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20200211111206808" modified="20200211145849135" title="$:/state/tabs/controlpanel/toolbars-1609250566">
@@ -13384,7 +13386,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="首页 示例汇总" title="$:/StoryList">
+<div list="首页 tiddlywiki使用" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200211111416152" list="$:/core/ui/EditorToolbar/bold $:/core/ui/EditorToolbar/italic $:/core/ui/EditorToolbar/strikethrough $:/core/ui/EditorToolbar/underline $:/core/ui/EditorToolbar/link $:/core/ui/EditorToolbar/linkify $:/core/ui/EditorToolbar/list-bullet $:/core/ui/EditorToolbar/list-number $:/core/ui/EditorToolbar/mono-line $:/core/ui/EditorToolbar/mono-block $:/core/ui/EditorToolbar/quote $:/core/ui/EditorToolbar/more $:/core/ui/EditorToolbar/stamp $:/core/ui/EditorToolbar/excise $:/core/ui/EditorToolbar/preview $:/core/ui/EditorToolbar/preview-type $:/core/ui/EditorToolbar/paint $:/core/ui/EditorToolbar/opacity $:/core/ui/EditorToolbar/line-width $:/core/ui/EditorToolbar/rotate-left $:/core/ui/EditorToolbar/clear $:/core/ui/EditorToolbar/transcludify $:/core/ui/EditorToolbar/picture $:/core/ui/EditorToolbar/editor-height $:/core/ui/EditorToolbar/size $:/core/ui/EditorToolbar/heading-1 $:/core/ui/EditorToolbar/heading-2 $:/core/ui/EditorToolbar/heading-3 $:/core/ui/EditorToolbar/heading-4 $:/core/ui/EditorToolbar/heading-5 $:/core/ui/EditorToolbar/heading-6 $:/core/ui/EditorToolbar/superscript $:/core/ui/EditorToolbar/subscript" modified="20200211112724405" title="$:/tags/EditorToolbar">
@@ -13403,7 +13405,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/hxj/Downloads/test_5.1.22-prerelease.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/lwtc/gt/tdwk/tiddlywiki/test_5.1.22-prerelease.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -13423,7 +13425,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/hxj/Downloads/test_5.1.22-prerelease.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/lwtc/gt/tdwk/tiddlywiki/test_5.1.22-prerelease.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -13602,27 +13604,78 @@ info:[[b]]
 |! 3 | | | | |
 </pre>
 </div>
-<div created="20200211113704342" modified="20200211114657428" tags="示例标签" title="示例多行文本">
+<div created="20200211113704342" modified="20221023065337182" tags="示例标签" title="示例多行文本">
 <pre>''多行文本''
+
+*只保留换行，不保留行首空白
+*行内格式不受影响，如下划线、超链接等
+
+
+```
+&quot;&quot;&quot;
+[[首页]]
+[[示例汇总]]
+[[访问GitHub|https://github.com/]]
+行内代码`echo hello`
+abcd__efg__hijk`lmn`opq[[rstuvw]]xyz
+b
+    c
+&quot;&quot;&quot;
+```
+
 
 &quot;&quot;&quot;
 [[首页]]
 [[示例汇总]]
 [[访问GitHub|https://github.com/]]
 行内代码`echo hello`
-&quot;&quot;&quot;
-</pre>
+abcd__efg__hijk`lmn`opq[[rstuvw]]xyz
+b
+    c
+&quot;&quot;&quot;</pre>
 </div>
-<div created="20200211073801181" modified="20200211114017524" tags="示例标签" title="示例汇总">
-<pre>[[示例多行文本]]
+<div created="20221023102605150" modified="20221023102822559" tags="示例标签" title="示例目录树">
+<pre>''示例目录树''
 
-[[示例无样式纯文本]]
+简单
 
-[[示例无序列表]]
+```
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc &quot;Contents&quot;&gt;&gt;
+&lt;/div&gt;
+```
 
-[[示例有序列表]]
+可展开可排序
 
-[[示例表格]]</pre>
+```
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc-selective-expandable &quot;Contents&quot; &quot;sort[title]&quot;&gt;&gt;
+&lt;/div&gt;
+```
+
+选项卡内部
+
+```
+&lt;$macrocall
+	$name=&quot;toc-tabbed-internal-nav&quot;
+	tag=&quot;TableOfContents&quot;
+	selectedTiddler=&quot;$:/temp/toc/selectedTiddler&quot;
+	unselectedText=&quot;&lt;p&gt;在目录中选择一个主题。 点击箭头展开主题。&lt;/p&gt;&quot;
+	missingText=&quot;&lt;p&gt;失踪的条目。&lt;/p&gt;&quot;
+/&gt;
+```
+
+选项卡外部
+
+```
+&lt;$macrocall
+	$name=&quot;toc-tabbed-external-nav&quot;
+	tag=&quot;TableOfContents&quot;
+	selectedTiddler=&quot;$:/temp/toc/selectedTiddler&quot;
+	unselectedText=&quot;&lt;p&gt;在目录中选择一个主题。 点击箭头展开主题。&lt;/p&gt;&quot;
+	missingText=&quot;&lt;p&gt;失踪的条目。&lt;/p&gt;&quot;
+/&gt;
+```</pre>
 </div>
 <div created="20200211113934133" modified="20200211114625196" tags="示例标签" title="示例无序列表">
 <pre>''无序列表''
@@ -13661,6 +13714,22 @@ info:[[b]]
 </div>
 <div created="20200211073516604" modified="20200211115303817" tags="" title="首页">
 <pre>默认（切到最近，关闭其他，打开主页）</pre>
+</div>
+<div created="20200211073801181" modified="20221023102842297" tags="示例标签" title="tiddlywiki使用">
+<pre>''基本原则''
+
+*及时保存
+*多用换行
+
+
+''示例汇总''
+
+#[[示例多行文本]]
+#[[示例无样式纯文本]]
+#[[示例无序列表]]
+#[[示例有序列表]]
+#[[示例表格]]
+#[[示例目录树]]</pre>
 </div>
 
 </div>
