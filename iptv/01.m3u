@@ -1,0 +1,124 @@
+#01.m3u
+#EXTM3U
+#HEAD
+#EXTINF:-1 group-title="News",US Redseat The First
+https://redseat-thefirst-klowdtv.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US Museum TV Fast
+https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01492-secomsasmediart-museumtv-en-plex/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US Shout Factory TV
+https://amg00163-shoutfactory-shoutfactory-dmr-maeqc.amagi.tv/playlist/amg00163-shoutfactory-shoutfactory-dmr/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",UN Real Life
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-reallifenz-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US AWE Encore
+https://aweencore-vizio.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",UN Fashion TV
+https://fashiontv-fashiontv-1-eu.rakuten.wurl.tv/playlist.m3u8
+#ELSE
+#EXTINF:-1 group-title="Movies",US FilmStreams
+https://spi-filmstream-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 group-title="Kids",US 3ABN Kids Network
+https://3abn-live.akamaized.net/hls/live/2010550/Kids/master.m3u8
+#EXTINF:-1 group-title="Undefined",US 3ABN English
+https://3abn-live.akamaized.net/hls/live/2010543/3ABN/master.m3u8
+#EXTINF:-1 group-title="Undefined",US 3ABN Dare To Dream Network
+https://3abn-live.akamaized.net/hls/live/2010545/D2D/master.m3u8
+#EXTINF:-1 group-title="News",US NBC Chicago News 24/7
+https://nbculocalfast.akamaized.net/hls/live/2096797/nbcchicago/master.m3u8
+#EXTINF:-1 group-title="Undefined",US NBCLX
+https://nbculocallive.akamaized.net/hls/live/2037096/lx/use1.m3u8
+#EXTINF:-1 group-title="Movies",US The Film Detective
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01201-cinedigmenterta-filmdetective-cineverse/playlist.m3u8
+#EXTINF:-1 group-title="Kids",US Ryan and Friends
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00286-pocketwatch-ryanandfriends-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="Movies",US Redbox 1: Spotlight
+https://spotlight-redbox.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies",US Redbox 2: Comedy
+https://comedy-redbox.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies",US Redbox 3: Rush
+https://rush-redbox.amagi.tv/hls/amagi_hls_data_redboxAAA-rush/CDN/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US Real Families
+https://lds-realfamilies-plex.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Outdoor",US Real Wild
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwildnz-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="Outdoor",US Outdoor Channel
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="Outdoor",US Outside TV Plus
+https://outsidetvplus-xumo.amagi.tv/hls/amagi_hls_data_outsidetv-outsidetvplusxumo/CDN/master.m3u8
+#EXTINF:-1 group-title="Movies",US MovieSphere
+https://moviesphere-plex.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Kids",US Kartoon Channel
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-kartoonchannel-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="Kids",US HappyKids Junior
+https://happykidsjunior-vizio.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US Fox Soul [Not 24/7]
+https://fox-foxsoul-roku.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US Demand Africa
+https://demandafrica-klowdtv.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US DeFiance Media
+https://amg01529-defiancetv-defiancemedia-glewed-tre8x.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies",US Crackle
+https://crackle-plex.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US Comedy Dynamics
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01201-cinedigmenterta-comedydynamics-cineverse/playlist.m3u8
+#EXTINF:-1 group-title="Outdoor",US CarbonTV
+https://amg01570-carbontv-carbontvono-ono-hnsm8.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US Buzzr
+https://buzzr-roku-us.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Kids",US Brat TV
+https://brat-rakuten.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="News",US Black News Channel
+https://blacknewschannel-vizio.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Outdoor",US Xplore TV
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00111-hearstmediaprod-xploreintlnl-samsungnl/playlist.m3u8
+#EXTINF:-1 group-title="Outdoor",US WildEarth
+https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01290-wildearth-oando/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US Unbeaten
+https://unbeaten-tcl.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="News",US The Young Turks
+https://tyt-samsungus.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US Tastemade Travel
+https://tastemadetravel-vizio.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US Tastemade International
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00047-tastemade-tmintlaus-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",US So...Real
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01201-cinedigmenterta-soreal-cineverse/playlist.m3u8
+#EXTINF:-1 group-title="Movies",UN Action Hollywood Movies
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="Outdoor",UN CineView
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-rialto-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",UN Pulse TV
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-pulse-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="News",CA CityNews
+https://citynewsregional.akamaized.net/hls/live/1024053/Regional_Live_8/master.m3u8
+#EXTINF:-1 group-title="News",CA CityNews Toronto
+https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/master.m3u8
+#EXTINF:-1 group-title="Outdoor",UN The Jack Hannah Channel
+https://littonjackhannah-samsungca.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",UN Pet Club TV
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-petclub-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="News",UK GB News
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-gbnewsnz-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="Outdoor",UK Horse and Country Free
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00810-horsecountrytvl-hncfreenz-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="Kids",UK Moonbug Kids
+https://moonbug-rokuus.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",UK PBS America
+https://pbs-samsunguk.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",UK Real Stories
+https://realstories-samsung-uk.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",UK Timeline
+https://timeline-samsung-uk.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies",UK Rakuten Action Movies
+https://rakuten-actionmovies-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies",UK Rakuten Comedy Movies
+https://rakuten-comedymovies-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies",UK Rakuten Shows
+https://rakuten-tvshows-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies",UK Rakuten Family
+https://rakuten-family-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies",UK Rakuten Spotlight
+https://rakuten-spotlight-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies",UK Rakuten Top Free
+https://rakuten-topfree-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 group-title="Undefined",UK Wonder
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-wondernz-samsungnz/playlist.m3u8
