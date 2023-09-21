@@ -1,0 +1,34 @@
+#02.m3u
+#EXTM3U
+#EXTINF:-1 ,bbc_world_service
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_world_service/bbc_world_service.isml/bbc_world_service-audio=320000.m3u8
+#EXTINF:-1 ,bbc_radio_fourfm
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_fourfm/bbc_radio_fourfm.isml/bbc_radio_fourfm-audio=320000.m3u8
+#EXTINF:-1 ,bbc_radio_four_extra
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_four_extra/bbc_radio_four_extra.isml/bbc_radio_four_extra-audio=320000.m3u8
+#EXTINF:-1 ,bbc_radio_five_live
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio=320000.m3u8
+#EXTINF:-1 ,bbc_asian_network
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_asian_network/bbc_asian_network.isml/bbc_asian_network-audio=320000.m3u8
+#EXTINF:-1 ,bbc_radio_one
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_one/bbc_radio_one.isml/bbc_radio_one-audio=320000.m3u8
+#EXTINF:-1 ,bbc_radio_two
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_two/bbc_radio_two.isml/bbc_radio_two-audio=320000.m3u8
+#EXTINF:-1 ,bbc_radio_three
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio=320000.m3u8
+#EXTINF:-1 ,bbc_1xtra
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_1xtra/bbc_1xtra.isml/bbc_1xtra-audio=320000.m3u8
+#EXTINF:-1 ,bbc_three_counties_radio
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_three_counties_radio/bbc_three_counties_radio.isml/bbc_three_counties_radio-audio=320000.m3u8
+#EXTINF:-1 ,bbc_6music
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio=320000.m3u8
+#EXTINF:-1 ,bbc_london
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_london/bbc_london.isml/bbc_london-audio=320000.m3u8
+#EXTINF:-1 ,bbc_radio_oxford
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_oxford/bbc_radio_oxford.isml/bbc_radio_oxford-audio=320000.m3u8
+#EXTINF:-1 ,bbc_radio_cambridge
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_cambridge/bbc_radio_cambridge.isml/bbc_radio_cambridge-audio=320000.m3u8
+#EXTINF:-1 ,bbc_radio_wales_fm
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_wales_fm/bbc_radio_wales_fm.isml/bbc_radio_wales_fm-audio=320000.m3u8
+#EXTINF:-1 ,bbc_radio_scotland_fm
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio=320000.m3u8
