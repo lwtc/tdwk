@@ -3,7 +3,9 @@
 #即可依次点播
 #EXTM3U
 #EXTINF:-1 ,AU ABC News
-https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8
+#https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8
+#last failed, new version
+https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8
 #EXTINF:-1 ,CN CGTN English
 https://live.cgtn.com/1000/prog_index.m3u8
 #EXTINF:-1 ,CN CGTN Documentary
